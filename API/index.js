@@ -8,7 +8,6 @@ const endpoint = express();
 endpoint.use(cors());
 endpoint.use(express.json());
 
-// Função para enviar email
 const sendEmail = async (emailData) => {
     return await axios.post('https://api.mailersend.com/v1/email', emailData, {
         headers: {
@@ -18,17 +17,14 @@ const sendEmail = async (emailData) => {
     });
 }
 
-// Rota para enviar email sobre coleta
 endpoint.post('/coleta', async (req, res) => {
     const { nome, cep, numero, tipo, email, endereco, telefone, data } = req.body; 
-    let enviado = false; // Use let para poder alterar o valor
+    let enviado = false; 
 
-    // Validando os campos obrigatórios
     if (!nome || !email || !tipo) {
         return res.status(400).json({ error: 'Por favor, preencha todos os campos obrigatórios: nome, email e tipo.' });
     }
 
-    // Estrutura do email a ser enviado ao responsável pela coleta
     const emailData = {
         from: {
             email: "MS_G3GXKg@trial-ynrw7gy2ox242k8e.mlsender.net",
@@ -64,11 +60,9 @@ endpoint.post('/coleta', async (req, res) => {
     };
 
     try {
-        // Enviando o email usando MailerSend
         await sendEmail(emailData);
         enviado = true;
 
-        // Estrutura do email a ser enviado ao usuário
         const userEmailData = {
             from: {
                 email: "MS_G3GXKg@trial-ynrw7gy2ox242k8e.mlsender.net",
@@ -87,7 +81,6 @@ endpoint.post('/coleta', async (req, res) => {
             `
         };
 
-        // Enviando o email ao usuário
         await sendEmail(userEmailData);
         return res.status(200).json({ message: 'Emails enviados com sucesso!' });
 
@@ -97,13 +90,11 @@ endpoint.post('/coleta', async (req, res) => {
     }
 });
 
-// Rota para enviar email sobre contato
 endpoint.post('/contato', async (req, res) => {
     const { nome, email, mensagem } = req.body;
 
-    // Validando os campos obrigatórios
     if (!nome || !email || !mensagem) {
-        return res.status(400).json({ error: 'Por favor, preencha todos os campos obrigatórios: nome, email e mensagem.' });
+        return res.status(400).json({ error: 'Por favor, preencha todos os campos obrigat   órios: nome, email e mensagem.' });
     }
 
     const emailData = {
