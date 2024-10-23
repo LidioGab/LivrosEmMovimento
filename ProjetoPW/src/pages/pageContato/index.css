@@ -1,0 +1,217 @@
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    font-family: 'rubik', sans-serif;
+    background-color: #f2f2f2;
+    
+}
+
+header{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    background-color: #A4DDED;
+    color: #2C3E50;
+    box-shadow: 4px -4px 30px -17px rgba(0,0,0,0.75);
+    margin-bottom: 40px;
+  
+}
+
+header > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+header:hover > div > img{
+    transform: scale(1.1);
+}
+
+
+
+header > div > img{
+    width: 70px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+header > div > h1{
+    font-size: 18px;
+
+}
+
+header > nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header > nav > a:hover{
+    transform: scale(1.1);
+}
+
+nav > a {
+    transition: transform 0.3s ease;
+    font-size: 18px;
+    margin: 0px 20px;
+    text-decoration: none;
+    outline: none;
+    color: #2C3E50;
+}
+
+main {
+    display: flex;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section > img {
+    height: 98px;
+}
+.contact-info {
+    margin-top: 40px;
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-info img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.contact-info h4 {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+.container {
+    width: 600px;
+    margin: 50px auto;
+    margin: 50px 60px 160px 450px;
+    padding: 20px;
+    background-color: #A4DDED;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo do título */
+.container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo dos campos de entrada */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.input-group input {
+    width: 48%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container input[type="text"], .container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Estilos do botão */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container button {
+    background-color: #2C3E50;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 23px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 5px
+}
+
+.button-container button:hover {
+    background-color: #555;
+}
+  h4 {
+    font-size: 24px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+
+footer{
+    height: 60px;
+    background-color: #C9F3FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer > h1{
+    text-align: center;
+    color: #2C3E50;
+    font-size: 18px;
+}
